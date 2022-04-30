@@ -33,6 +33,7 @@ tun:
   auto-detect-interface: true # auto detect interface, conflict with `interface-name`
   dns-hijack:
     - 22.0.0.2:53 # when `fake-ip-range` is 198.18.0.1/16, should hijack 198.18.0.2:53
+    - udp://any:53
 #interface-name: WLAN
 dns:
   enable: true
@@ -47,6 +48,7 @@ tun:
 #  auto-detect-interface: true # auto detect interface, conflict with `interface-name`
   dns-hijack:
     - 1.0.0.1:53 # Do not modifly this line
+    - udp://any:53
 #interface-name: WLAN
 dns:
   enable: true
@@ -57,8 +59,9 @@ dns:
 ipv6: true
 tun:
   enable: true
-  stack: gvisor #  system or gvisor
-  dns-listen: 0.0.0.0:53 # additional dns server listen on TUN
+  stack: gvisor #  only gvisor
+  dns-hijack:
+    - 0.0.0.0:53 # additional dns server listen on TUN
   auto-route: true # auto set global route
 #interface-name: WLAN
 dns:
@@ -77,6 +80,7 @@ dns:
   default-nameserver:
     - 223.5.5.5
     - 119.29.29.29
+    - 1.1.1.1
   enhanced-mode: fake-ip # redir-host #fake-ip
   fake-ip-range: 22.0.0.0/8
   fake-ip-filter:
@@ -246,27 +250,27 @@ dns:
 {% if request.target == "surge" %}
 
 [General]
+allow-wifi-access = true
 ipv6 = true
 loglevel = notify
-http-listen = 8829
-socks5-listen = 8828
-allow-wifi-access = true
-wifi-access-http-port = 8838
-wifi-access-socks5-port = 8839
-external-controller-access = 6170@0.0.0.0:6155
-dns-server = system, 119.29.29.29, 223.5.5.5
+dns-server = system, 119.29.29.29, 223.5.5.5, 1.1.1.1, 1.0.0.1, 8.8.8.8, 8.8.4.4, 9.9.9.9:9953
 doh-server = https://9.9.9.9/dns-query, https://dns.alidns.com/dns-query, https://i.233py.com/dns-query, https://doh.pub/dns-query, https://dns.pub/dns-query, https://dns.cfiec.net/dns-query, https://dns.rubyfish.cn/dns-query, https://doh.mullvad.net/dns-query, https://doh.dns.sb/dns-query, https://dns.twnic.tw/dns-query, https://doh.opendns.com/dns-query, https://dns.233py.com/dns-query, https://public.dns.iij.jp/dns-query, https://doh.mullvad.net/dns-query
 hijack-dns = 8.8.8.8:53
-always-real-ip = *.example, *.home.arpa, *.invalid, *.lan, *.local, *.localdomain, *.localhost, *.test, mesu.apple.com, swscan.apple.com, *.router.asus.com, lens.l.google.com, stun.l.google.com, proxy.golang.org, *.linksys.com, *.linksyssmartwifi.com, *.ipv6.microsoft.com, *.msftconnecttest.com, *.msftncsi.com, msftconnecttest.com, msftncsi.com, ntp.*.com, ntp1.*.com, ntp2.*.com, ntp3.*.com, ntp4.*.com, ntp5.*.com, ntp6.*.com, ntp7.*.com, time.*.apple.com, time.*.com, time.*.gov, time1.*.com, time2.*.com, time3.*.com, time4.*.com, time5.*.com, time6.*.com, time7.*.com, time.*.edu.cn, *.time.edu.cn, *.ntp.org.cn, +.pool.ntp.org, time1.cloud.tencent.com, speedtest.cros.wr.pvp.net, *.*.xboxlive.com, xbox.*.*.microsoft.com, xbox.*.microsoft.com, xnotify.xboxlive.com, *.*.*.srv.nintendo.net, +.srv.nintendo.net, *.*.stun.playstation.net, +.stun.playstation.net, +.stun.*.*.*.*, +.stun.*.*.*, +.stun.*.*, stun.*.*.*, stun.*.*, *.music.migu.cn, music.migu.cn, music.taihe.com, musicapi.taihe.com, songsearch.kugou.com, trackercdn.kugou.com, *.kuwo.cn, api-jooxtt.sanook.com, api.joox.com, joox.com, y.qq.com, *.y.qq.com, amobile.music.tc.qq.com, aqqmusic.tc.qq.com, mobileoc.music.tc.qq.com, streamoc.music.tc.qq.com, dl.stream.qqmusic.qq.com, isure.stream.qqmusic.qq.com, music.163.com, *.music.163.com, *.126.net, *.xiami.com, localhost.ptlogin2.qq.com, localhost.sec.qq.com
 tun-excluded-routes = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12
 tun-included-routes = 192.168.1.12/32
-tls-provider = openssl
+always-real-ip = *.example, *.home.arpa, *.invalid, *.lan, *.local, *.localdomain, *.localhost, *.test, mesu.apple.com, swscan.apple.com, *.router.asus.com, lens.l.google.com, stun.l.google.com, proxy.golang.org, *.linksys.com, *.linksyssmartwifi.com, *.ipv6.microsoft.com, *.msftconnecttest.com, *.msftncsi.com, msftconnecttest.com, msftncsi.com, ntp.*.com, ntp1.*.com, ntp2.*.com, ntp3.*.com, ntp4.*.com, ntp5.*.com, ntp6.*.com, ntp7.*.com, time.*.apple.com, time.*.com, time.*.gov, time1.*.com, time2.*.com, time3.*.com, time4.*.com, time5.*.com, time6.*.com, time7.*.com, time.*.edu.cn, *.time.edu.cn, *.ntp.org.cn, +.pool.ntp.org, time1.cloud.tencent.com, speedtest.cros.wr.pvp.net, *.*.xboxlive.com, xbox.*.*.microsoft.com, xbox.*.microsoft.com, xnotify.xboxlive.com, *.*.*.srv.nintendo.net, +.srv.nintendo.net, *.*.stun.playstation.net, +.stun.playstation.net, +.stun.*.*.*.*, +.stun.*.*.*, +.stun.*.*, stun.*.*.*, stun.*.*, *.music.migu.cn, music.migu.cn, music.taihe.com, musicapi.taihe.com, songsearch.kugou.com, trackercdn.kugou.com, *.kuwo.cn, api-jooxtt.sanook.com, api.joox.com, joox.com, y.qq.com, *.y.qq.com, amobile.music.tc.qq.com, aqqmusic.tc.qq.com, mobileoc.music.tc.qq.com, streamoc.music.tc.qq.com, dl.stream.qqmusic.qq.com, isure.stream.qqmusic.qq.com, music.163.com, *.music.163.com, *.126.net, *.xiami.com, localhost.ptlogin2.qq.com, localhost.sec.qq.com, *.mcdn.bilivideo.cn
+http-listen = 0.0.0.0:8829
+socks5-listen = 0.0.0.0:8828
+wifi-access-http-port = 8838
+wifi-access-socks5-port = 8839
 exclude-simple-hostnames = true
+external-controller-access = 6170@0.0.0.0:6155
+tls-provider = openssl
 skip-proxy = 127.0.0.1, 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, localhost, *.local
 force-http-engine-hosts = 122.14.246.33, 175.102.178.52, mobile-api2011.elong.com
-internet-test-url = http://cp.cloudflare.com/generate_204
-proxy-test-url = http://cp.cloudflare.com/generate_204
-test-timeout = 3
+internet-test-url = http://connectivitycheck.gstatic.com/generate_204
+proxy-test-url = http://connectivitycheck.gstatic.com/generate_204
+test-timeout = 5
 
 [Replica]
 hide-apple-request=1
@@ -443,23 +447,36 @@ loglevel = warning
 
 [General]
 allow-wifi-access = true
-collapse-policy-group-items = true
-dns-server = system, 119.29.29.29, 223.5.5.5, 1.1.1.1, 1.0.0.1, 8.8.8.8
-enhanced-mode-by-rule = true
-exclude-simple-hostnames = true
-external-controller-access = surfboard@127.0.0.1:6170
-hide-crashlytics-request = false
 ipv6 = true
 loglevel = notify
-port = 8828
-socks-port = 8829
+collapse-policy-group-items = true
+dns-server = system, 119.29.29.29, 223.5.5.5, 1.1.1.1, 1.0.0.1, 8.8.8.8, 8.8.4.4, 9.9.9.9:9953
+always-real-ip = *.example, *.home.arpa, *.invalid, *.lan, *.local, *.localdomain, *.localhost, *.test, mesu.apple.com, swscan.apple.com, *.router.asus.com, lens.l.google.com, stun.l.google.com, proxy.golang.org, *.linksys.com, *.linksyssmartwifi.com, *.ipv6.microsoft.com, *.msftconnecttest.com, *.msftncsi.com, msftconnecttest.com, msftncsi.com, ntp.*.com, ntp1.*.com, ntp2.*.com, ntp3.*.com, ntp4.*.com, ntp5.*.com, ntp6.*.com, ntp7.*.com, time.*.apple.com, time.*.com, time.*.gov, time1.*.com, time2.*.com, time3.*.com, time4.*.com, time5.*.com, time6.*.com, time7.*.com, time.*.edu.cn, *.time.edu.cn, *.ntp.org.cn, +.pool.ntp.org, time1.cloud.tencent.com, speedtest.cros.wr.pvp.net, *.*.xboxlive.com, xbox.*.*.microsoft.com, xbox.*.microsoft.com, xnotify.xboxlive.com, *.*.*.srv.nintendo.net, +.srv.nintendo.net, *.*.stun.playstation.net, +.stun.playstation.net, +.stun.*.*.*.*, +.stun.*.*.*, +.stun.*.*, stun.*.*.*, stun.*.*, *.music.migu.cn, music.migu.cn, music.taihe.com, musicapi.taihe.com, songsearch.kugou.com, trackercdn.kugou.com, *.kuwo.cn, api-jooxtt.sanook.com, api.joox.com, joox.com, y.qq.com, *.y.qq.com, amobile.music.tc.qq.com, aqqmusic.tc.qq.com, mobileoc.music.tc.qq.com, streamoc.music.tc.qq.com, dl.stream.qqmusic.qq.com, isure.stream.qqmusic.qq.com, music.163.com, *.music.163.com, *.126.net, *.xiami.com, localhost.ptlogin2.qq.com, localhost.sec.qq.com, *.mcdn.bilivideo.cn
+enhanced-mode-by-rule = true
+http-listen = 0.0.0.0:8829
+socks5-listen = 0.0.0.0:8828
 wifi-access-http-port=8838
 wifi-access-socks5-port=8839
-interface = 0.0.0.0
-socks-interface = 0.0.0.0
-internet-test-url = http://cp.cloudflare.com/generate_204
-proxy-test-url = http://cp.cloudflare.com/generate_204
+exclude-simple-hostnames = true
+external-controller-access = surfboard@127.0.0.1:6170
+skip-proxy = 127.0.0.1, 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, localhost, *.local
+udp-policy-not-supported-behaviour = REJECT
+hide-crashlytics-request = false
+internet-test-url = http://connectivitycheck.gstatic.com/generate_204
+proxy-test-url = http://connectivitycheck.gstatic.com/generate_204
 test-timeout = 5
+
+[Host]
+#abc.com = 1.2.3.4
+#*.dev = 6.7.8.9
+#foo.com = bar.com
+#bar.com = server:8.8.8.8
+
+[Proxy]
+
+[Proxy Group]
+
+[Rule]
 
 {% endif %}
 {% if request.target == "sssub" %}
