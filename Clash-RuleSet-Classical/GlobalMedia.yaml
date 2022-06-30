@@ -88,6 +88,8 @@ payload:
   - DOMAIN-SUFFIX,bidi.net.uk
   - DOMAIN,aod-dash-uk-live.akamaized.net
   - DOMAIN,aod-hls-uk-live.akamaized.net
+  - DOMAIN,as-dash-uk-live.akamaized.net
+  - DOMAIN,as-hls-uk-live.akamaized.net
   - DOMAIN,vod-dash-uk-live.akamaized.net
   - DOMAIN,vod-dash-uk-live.bbcfmt.hs.llnwd.net
   - DOMAIN,vod-dash-ww-live.akamaized.net
@@ -98,6 +100,7 @@ payload:
   - DOMAIN,vod-thumb-uk-live.bbcfmt.hs.llnwd.net
   - DOMAIN,vod-thumb-ww-live.akamaized.net
   - DOMAIN,vod-thumb-ww-live.bbcfmt.s.llnwi.net
+  - DOMAIN,vs-cmaf-push-uk-live.akamaized.net
   - DOMAIN-KEYWORD,bbcfmt
   - DOMAIN-KEYWORD,uk-live
   ## > BiliBiliHMT 哔哩哔哩 港澳台番剧
@@ -219,6 +222,7 @@ payload:
   ## > Discovery Plus
   - DOMAIN-SUFFIX,content-ause1-ur-discovery1.uplynk.com
   - DOMAIN-SUFFIX,disco-api.com
+  - DOMAIN-SUFFIX,discovery.com
   - DOMAIN-SUFFIX,discoveryplus.co.uk
   - DOMAIN-SUFFIX,discoveryplus.com
   - DOMAIN-SUFFIX,discoveryplus.in
@@ -854,11 +858,13 @@ payload:
   ## > KKBOX
   - DOMAIN-SUFFIX,kfs.io
   - DOMAIN-SUFFIX,kk.stream
+  - DOMAIN-SUFFIX,kkbox-prime.com
   - DOMAIN-SUFFIX,kkbox.com
   - DOMAIN-SUFFIX,kkbox.com.tw
   - DOMAIN-SUFFIX,kktix.com
   - DOMAIN-SUFFIX,kktv.com.tw
   - DOMAIN-SUFFIX,kktv.me
+  - DOMAIN-SUFFIX,theater-kktv.cdn.hinet.net
   ## > Litv
   - DOMAIN-SUFFIX,litv.tv
   - DOMAIN,litvfreemobile-hichannel.cdn.hinet.net
@@ -933,8 +939,10 @@ payload:
   - DOMAIN-SUFFIX,nflxso.net
   - DOMAIN-SUFFIX,nflxvideo.net
   - DOMAIN-SUFFIX,us-west-2.amazonaws.com
-  - DOMAIN-KEYWORD,dualstack.apiproxy-device-prod-nlb-
+  - DOMAIN-KEYWORD,apiproxy-device-prod-nlb-
+  - DOMAIN-KEYWORD,dualstack.apiproxy-
   - DOMAIN-KEYWORD,dualstack.ichnaea-web-
+  - DOMAIN-KEYWORD,netflixdnstest
   ## >> DNS test
   - DOMAIN-SUFFIX,netflixdnstest0.com
   - DOMAIN-SUFFIX,netflixdnstest1.com

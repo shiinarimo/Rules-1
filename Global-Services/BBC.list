@@ -17,6 +17,8 @@ DOMAIN-SUFFIX,bbcverticals.com
 DOMAIN-SUFFIX,bidi.net.uk
 DOMAIN,aod-dash-uk-live.akamaized.net
 DOMAIN,aod-hls-uk-live.akamaized.net
+DOMAIN,as-dash-uk-live.akamaized.net
+DOMAIN,as-hls-uk-live.akamaized.net
 DOMAIN,vod-dash-uk-live.akamaized.net
 DOMAIN,vod-dash-uk-live.bbcfmt.hs.llnwd.net
 DOMAIN,vod-dash-ww-live.akamaized.net
@@ -27,5 +29,6 @@ DOMAIN,vod-thumb-uk-live.akamaized.net
 DOMAIN,vod-thumb-uk-live.bbcfmt.hs.llnwd.net
 DOMAIN,vod-thumb-ww-live.akamaized.net
 DOMAIN,vod-thumb-ww-live.bbcfmt.s.llnwi.net
+DOMAIN,vs-cmaf-push-uk-live.akamaized.net
 DOMAIN-KEYWORD,bbcfmt
 DOMAIN-KEYWORD,uk-live

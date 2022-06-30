@@ -15,10 +15,12 @@ payload:
   - DOMAIN-SUFFIX,bytefcdn.com
   - DOMAIN-SUFFIX,bytegoofy.com
   - DOMAIN-SUFFIX,bytescm.com
+  - DOMAIN-SUFFIX,bytetos.com
   - DOMAIN-SUFFIX,cdndns1.com
   - DOMAIN-SUFFIX,cdndns2.com
   - DOMAIN-SUFFIX,feelgood.cn
   - DOMAIN-SUFFIX,huoshancdn.com
+  - DOMAIN-SUFFIX,ibytedapm.com
   - DOMAIN-SUFFIX,icphoto.cn
   - DOMAIN-SUFFIX,jinritoutiao.com
   - DOMAIN-SUFFIX,jokecommunity.cn
@@ -26,6 +28,7 @@ payload:
   - DOMAIN-SUFFIX,jokecommunity.net
   - DOMAIN-SUFFIX,jstti.com
   - DOMAIN-SUFFIX,jtamac.com
+  - DOMAIN-SUFFIX,kspkg.com
   - DOMAIN-SUFFIX,neihancommunity.cn
   - DOMAIN-SUFFIX,neihancommunity.com
   - DOMAIN-SUFFIX,neihancommunity.net
@@ -63,6 +66,7 @@ payload:
   - DOMAIN-SUFFIX,ttjisu.com
   - DOMAIN-SUFFIX,wtturl.cn
   - DOMAIN-SUFFIX,youdianyisi.com
+  - DOMAIN-SUFFIX,zijieapi.com
   - DOMAIN-SUFFIX,zijiecdn.cn
   - DOMAIN-SUFFIX,zijieimg.cn
   - DOMAIN-SUFFIX,zijieimg.com
@@ -105,6 +109,8 @@ payload:
   - DOMAIN-SUFFIX,bytedns.net
   - DOMAIN-SUFFIX,bytednsdoc.com
   - DOMAIN-SUFFIX,byteimg.com
+  - DOMAIN-SUFFIX,byteoversea.com
+  - DOMAIN-SUFFIX,bytetcc.com
   - DOMAIN-SUFFIX,bytexservice.com
   - DOMAIN-SUFFIX,douyin.com
   - DOMAIN-SUFFIX,douyinact.com
@@ -123,6 +129,8 @@ payload:
   - DOMAIN-SUFFIX,dyshortvideo.com
   - DOMAIN-SUFFIX,dyvideotape.com
   - DOMAIN-SUFFIX,huaxiong.com
+  - DOMAIN-SUFFIX,ibytedtos.com
+  - DOMAIN-SUFFIX,ibyteimg.com
   - DOMAIN-SUFFIX,idouyinpic.com
   - DOMAIN-SUFFIX,idouyinstatic.com
   - DOMAIN-SUFFIX,idouyinvod.com
@@ -133,8 +141,21 @@ payload:
   - DOMAIN-SUFFIX,zijiecdn.com
   - DOMAIN-SUFFIX,zijiecdn.net
   - DOMAIN-SUFFIX,zjcdn.com
+  ## >> TikTok
+  - PROCESS-NAME,com.zhiliaoapp.musically
+  - DOMAIN-KEYWORD,-tiktokcdn-com
+  - DOMAIN,p16-tiktokcdn-com.akamaized.net
+  - DOMAIN-SUFFIX,ipstatp.com
+  - DOMAIN-SUFFIX,muscdn.com
+  - DOMAIN-SUFFIX,musical.ly
+  - DOMAIN-SUFFIX,sgpstatp.com
+  - DOMAIN-SUFFIX,tik-tokapi.com
+  - DOMAIN-SUFFIX,tiktok.com
+  - DOMAIN-SUFFIX,tiktokcdn.com
+  - DOMAIN-SUFFIX,tiktokv.com
   ## >> 抖音火山版
   - DOMAIN-SUFFIX,huoshan.com
+  - DOMAIN-SUFFIX,huoshanstatic.com
   - DOMAIN-SUFFIX,huoshanzhibo.com
   ## >> 番茄小说
   - DOMAIN-SUFFIX,changdunovel.com
@@ -169,7 +190,6 @@ payload:
   - DOMAIN-SUFFIX,huoshanimg.com
   - DOMAIN-SUFFIX,huoshanlive.com
   - DOMAIN-SUFFIX,huoshanparty.com
-  - DOMAIN-SUFFIX,huoshanstatic.com
   - DOMAIN-SUFFIX,huoshante8.com
   - DOMAIN-SUFFIX,huoshanvideo.cn
   - DOMAIN-SUFFIX,huoshanvideo.net
