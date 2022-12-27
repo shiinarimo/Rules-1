@@ -1,5 +1,6 @@
 ## 🌍 GlobalMedia
 ## > AbemaTV
+DOMAIN-SUFFIX,abema-tv.com
 DOMAIN-SUFFIX,abema.io
 DOMAIN-SUFFIX,abema.tv
 DOMAIN-SUFFIX,adx.promo
@@ -56,6 +57,65 @@ DOMAIN,dmqdd6hw24ucf.cloudfront.net
 DOMAIN-KEYWORD,avoddashs
 ## > Americasvoice
 DOMAIN-SUFFIX,americasvoice.news
+## > AppleMedia
+## >> Apple Music
+DOMAIN-SUFFIX,aod.itunes.apple.com
+DOMAIN-SUFFIX,applemusic.berlin
+DOMAIN-SUFFIX,applemusic.co
+DOMAIN-SUFFIX,applemusic.com
+DOMAIN-SUFFIX,applemusic.com.au
+DOMAIN-SUFFIX,applemusic.hamburg
+DOMAIN-SUFFIX,applemusic.wang
+DOMAIN-SUFFIX,applemusicconnect.com
+DOMAIN-SUFFIX,applemusicfestival.com
+DOMAIN-SUFFIX,audio-ssl.itunes.apple.com
+DOMAIN-SUFFIX,audio.itunes.apple.com
+DOMAIN-SUFFIX,blobstore.apple.com
+DOMAIN-SUFFIX,musickit.net
+DOMAIN-SUFFIX,mvod.itunes.apple.com
+DOMAIN-SUFFIX,streamingaudio.itunes.apple.com
+DOMAIN-SUFFIX,wwwapplemusic.com
+## >> Apple News
+DOMAIN-SUFFIX,apple.comscoreresearch.com
+DOMAIN-SUFFIX,apple.news
+DOMAIN-SUFFIX,appleenews.com
+DOMAIN-SUFFIX,applenews.berlin
+DOMAIN-SUFFIX,applenews.hamburg
+DOMAIN-SUFFIX,applenews.tv
+DOMAIN-SUFFIX,applenewsformat.com
+DOMAIN-SUFFIX,news-assets.apple.com
+DOMAIN-SUFFIX,news-client.apple.com
+DOMAIN-SUFFIX,news-edge.apple.com
+DOMAIN-SUFFIX,news-events.apple.com
+## >> Apple TV
+DOMAIN-SUFFIX,appletv.com
+DOMAIN-SUFFIX,appletv.fr
+DOMAIN-SUFFIX,appletv.wang
+DOMAIN-SUFFIX,appletv4.cn
+DOMAIN-SUFFIX,appletv4.com.cn
+DOMAIN-SUFFIX,appletvapp.apple
+DOMAIN-SUFFIX,hls-amt.itunes.apple.com
+DOMAIN-SUFFIX,hls.itunes.apple.com
+DOMAIN-SUFFIX,play-edge.itunes.apple.com
+DOMAIN-SUFFIX,tv.apple.com
+## >> iBook
+DOMAIN-SUFFIX,i-book.com
+DOMAIN-SUFFIX,i-book.net
+DOMAIN-SUFFIX,ibook.co.nz
+DOMAIN-SUFFIX,ibook.com
+DOMAIN-SUFFIX,ibook.eu
+DOMAIN-SUFFIX,ibook.net
+DOMAIN-SUFFIX,ibookpartner.com
+DOMAIN-SUFFIX,ibooksauthor.com
+## >> iPhoto
+DOMAIN-SUFFIX,iphoto.eu
+DOMAIN-SUFFIX,iphoto.no
+DOMAIN-SUFFIX,iphoto.se
+DOMAIN-SUFFIX,iphoto.wang
+## >> iMovie
+DOMAIN-SUFFIX,imovie.eu
+DOMAIN-SUFFIX,imoviegallery.com
+DOMAIN-SUFFIX,imoviestage.com
 ## > ATTWatchTV
 DOMAIN-SUFFIX,att.tv
 DOMAIN-SUFFIX,atttvnow.com
@@ -395,6 +455,12 @@ DOMAIN-SUFFIX,espnqa.com
 DOMAIN-SUFFIX,watchespn.com
 DOMAIN-SUFFIX,espn.hb.omtrdc.net
 DOMAIN-SUFFIX,espndotcom.tt.omtrdc.net
+DOMAIN-SUFFIX,espn.api.edge.bamgrid.com
+## >> Hotstar
+DOMAIN-SUFFIX,hotstar-cdn.net
+DOMAIN-SUFFIX,hotstar.com
+DOMAIN-SUFFIX,hotstarext.com
+DOMAIN-SUFFIX,hsprepack.akamaized.net
 ## >> Marvel
 DOMAIN-SUFFIX,marvel.com
 DOMAIN-SUFFIX,marvel10thanniversary.com
@@ -812,6 +878,7 @@ DOMAIN-SUFFIX,payhulu.com
 DOMAIN-SUFFIX,registerhulu.com
 DOMAIN-SUFFIX,thehulubraintrust.com
 DOMAIN-SUFFIX,wwwhuluplus.com
+DOMAIN-SUFFIX,hulu.playback.edge.bamgrid.com
 # >> HuluJapan
 DOMAIN-SUFFIX,happyon.jp
 DOMAIN-SUFFIX,hjholdings.jp
@@ -1670,8 +1737,8 @@ PROCESS-NAME,com.viu.pad
 PROCESS-NAME,com.viu.phone
 PROCESS-NAME,com.vuclip.viu
 DOMAIN-SUFFIX,viu.com
-DOMAIN-SUFFIX,viu.tv
 DOMAIN-SUFFIX,viu.now.com
+DOMAIN-SUFFIX,viu.tv
 DOMAIN-SUFFIX,cognito-identity.us-east-1.amazonaws.com
 DOMAIN-SUFFIX,mobileanalytics.us-east-1.amazonaws.com
 DOMAIN-SUFFIX,d1k2us671qcoau.cloudfront.net
